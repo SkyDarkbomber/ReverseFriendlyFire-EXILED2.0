@@ -38,7 +38,7 @@ namespace ReverseFriendlyFire_EXILED.Handlers
             float DmgList = DamageList.Sum();
             float RemainingDmg = DmgList - ReverseFriendlyFire.Instance.Config.MaxFriendlyFire;
 
-            if( RemainingDmg >= 225 )
+            if( RemainingDmg >= ReverseFriendlyFire.Instance.Config.MaxFriendlyFire)
             {
                 ev.Attacker.Broadcast(duration: 15, message: "REVERSE FRIENDLY FIRE IS ACTIVE ANY DAMAGE YOU DONE TO A FRIENDLIES WILL BE DIRECTED AT YOU");
                 if (ev.Attacker.Side == ev.Target.Side)
